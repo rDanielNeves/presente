@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para minha petena 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>💖 Para pinguinizinha 💖</h1>
+    <p>Contagem desde o dia em que te pedi em namoro:</p>
+    <div class="countdown" id="countdown"></div>
+
+    <p>Contagem desde o nosso primeiro dia que nos falamos:</p>
+    <div class="countdown" id="countdownFirstTalk"></div>
+
+    <p>Contagem desde o nosso primeiro beijo:</p>
+    <div class="countdown" id="countdownFirstKiss"></div>
+
+    <h2>Aqui não tem nem 1% da nossa história mas são fotos mui bonitas e com carinho 📸</h2>
+    <div class="gallery">
+        <img src="img/img1.jpg" alt="Momento especial 1">
+        <img src="img/img2.jpg" alt="Momento especial 2">
+        <img src="img/img3.jpg" alt="Momento especial 3">
+        <img src="img/img4.jpg" alt="Momento especial 4">
+        <img src="img/img5.jpg" alt="Momento especial 5">
+        <img src="img/img6.jpg" alt="Momento especial 6">
+        <img src="img/img7.jpg" alt="Momento especial 7">
+        <img src="img/img8.jpg" alt="Momento especial 8">
+        <img src="img/img9.jpg" alt="Momento especial 9">
+        <img src="img/img10.jpg" alt="Momento especial 10">
+        <img src="img/img11.jpg" alt="Momento especial 11">
+        <img src="img/img12.jpg" alt="Momento especial 12">
+        <img src="img/img14.jpg" alt="Momento especial 13">
+        <img src="img/img15.jpg" alt="Momento especial 14">
+        <img src="img/img16.jpg" alt="Momento especial 15">
+        <img src="img/img17.jpg" alt="Momento especial 16">
+        <img src="img/img18.jpg" alt="Momento especial 17">
+        <img src="img/img19.jpg" alt="Momento especial 18">
+        <img src="img/img20.jpg" alt="Momento especial 19">
+        <img src="img/img21.jpg" alt="Momento especial 20">
+        <img src="img/img22.jpg" alt="Momento especial 21">
+        <img src="img/img23.jpg" alt="Momento especial 22">
+    </div>
+    <h2>Te amo muito, pinguinizinha! 💖</h2>
+
+    <button onclick="showMessage()" style="padding: 10px 20px; font-size: 1rem; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Clique para uma surpresa 💌
+    </button>
+    <p id="surpriseMessage" style="display: none; font-size: 1.2rem; color: #fff; margin-top: 20px;"></p>
+
+    <script>
+        function countFromStart() {
+            const startDate = new Date("2022-09-08 13:00:00").getTime(); // Substitua pela data do início do namoro
+            setInterval(function() {
+                const now = new Date().getTime();
+                const timeElapsed = now - startDate;
+
+                const days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeElapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s Desde o nosso primeiro dia juntos 💕`;
+            }, 1000);
+        }
+
+        function countFromFirstTalk() {
+            const firstTalkDate = new Date("2022-05-07 17:15:00").getTime(); // Substitua pela data do primeiro dia que se falaram
+            setInterval(function() {
+                const now = new Date().getTime();
+                const timeElapsed = now - firstTalkDate;
+
+                const days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeElapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
+
+                document.getElementById("countdownFirstTalk").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s Desde o nosso primeiro dia que nos falamos 💬`;
+            }, 1000);
+        }
+
+        function countFromFirstKiss() {
+            const firstKissDate = new Date("2022-05-17 07:50:00").getTime(); // Substitua pela data do primeiro beijo
+            setInterval(function() {
+                const now = new Date().getTime();
+                const timeElapsed = now - firstKissDate;
+
+                const days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeElapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
+
+                document.getElementById("countdownFirstKiss").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s Desde o nosso primeiro beijo 💋`;
+            }, 1000);
+        }
+
+        function showMessage() {
+            document.getElementById("surpriseMessage").innerText = "Procure seu presente 💖";
+            document.getElementById("surpriseMessage").style.display = "block";
+        }
+
+        countFromStart();
+        countFromFirstTalk();
+        countFromFirstKiss();
+    </script>
+
+</body>
+
+<footer>
+    <p style="text-align: center; margin-top: 20px;">Feito com mui amor por seu mim, a pessoa mais apaixonado do mundo! 🐧</p>
+    <p style="text-align: center;">Se você está vendo isso, é porque eu te amo muito! 💕</p>
+</footer>
+</html>
